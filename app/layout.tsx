@@ -20,11 +20,11 @@ export default function RootLayout({
           <AnalyticsWrapper />
         </div>
         <footer className="footer">
-           <a target="_blank" rel="no-opener" href="https://github.com/dabit3/gpt-travel-advisor">
+           <a target="_blank" rel="no-opener" href="https://github.com/ProtocolPal/protocol-pal">
            <Image style={{ marginTop: '2px'}} alt="code available on github" width="18" height="18" src="/github.svg" />
            </a>
             <p>
-            Built with 🫶 by <a target="_blank" rel="no-opener" href="https://github.com/BasamAlasaly">@BasamAlasaly</a> <a target="_blank" rel="no-opener" href="https://github.com/oceanexplains">@oceanexplains</a> <a target="_blank" rel="no-opener" href="https://github.com/tkruer">@tkruer</a> <a className="sponsor" target="_blank" rel="no-opener" href="https://github.com/dabit3/gpt-travel-advisor">🫡 Sponsor this project</a>
+            Built with 🫶 by <a target="_blank" rel="no-opener" href="https://github.com/BasamAlasaly">@BasamAlasaly</a> <a target="_blank" rel="no-opener" href="https://github.com/oceanexplains">@oceanexplains</a> <a target="_blank" rel="no-opener" href="https://github.com/tkruer">@tkruer</a> <a className="sponsor" target="_blank" rel="no-opener" href="https://github.com/ProtocolPal/protocol-pal">🫡 Sponsor this project</a>
             </p>
         </footer>
       </body>
