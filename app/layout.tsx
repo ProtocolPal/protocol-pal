@@ -24,7 +24,7 @@ export default function RootLayout({
            <Image style={{ marginTop: '2px'}} alt="code available on github" width="18" height="18" src="/github.svg" />
            </a>
             <p>
-            Built with 🫶 by <a target="_blank" rel="no-opener" href="https://github.com/BasamAlasaly">@BasamAlasaly</a> <a target="_blank" rel="no-opener" href="https://github.com/oceanexplains">@oceanexplains</a> <a target="_blank" rel="no-opener" href="https://github.com/tkruer">@tkruer</a> <a className="sponsor" target="_blank" rel="no-opener" href="https://github.com/ProtocolPal/protocol-pal">🫡 Sponsor this project</a>
+            Built with 🫶 by <a target="_blank" rel="no-opener" href="https://github.com/BasamAlasaly">@BasamAlasaly</a>, <a target="_blank" rel="no-opener" href="https://github.com/oceanexplains">@oceanexplains</a>, and <a target="_blank" rel="no-opener" href="https://github.com/tkruer">@tkruer</a> <a className="sponsor" target="_blank" rel="no-opener" href="https://github.com/ProtocolPal/protocol-pal">🫡 Sponsor this project</a>
             </p>
         </footer>
       </body>

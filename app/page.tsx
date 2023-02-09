@@ -81,15 +81,15 @@ export default function Home() {
   return (
     <main>
       <div className="app-container">
-        <h1 style={styles.header} className="hero-header">Roam Around</h1>
+        <h1 style={styles.header} className="hero-header">Protocol Pal</h1>
         <div style={styles.formContainer} className="form-container">
-          <input style={styles.input}  placeholder="City" onChange={e => setRequest(request => ({
+          <input style={styles.input}  placeholder="What lab troubles are you experiencing?" onChange={e => setRequest(request => ({
             ...request, city: e.target.value
           }))} />
-          <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
+          {/* <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
             ...request, days: e.target.value
-          }))} />
-          <button className="input-button"  onClick={hitAPI}>Build Itinerary</button>
+          }))} /> */}
+          <button className="input-button"  onClick={hitAPI}>Help Me</button>
         </div>
         <div className="results-container">
         {
@@ -132,7 +132,7 @@ const styles = {
   header: {
     textAlign: 'center' as 'center',
     marginTop: '60px',
-    color: '#c683ff',
+    color: '#006693',
     fontWeight: '900',
     fontFamily: 'Poppins',
     fontSize: '68px'

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&display=swap');
 
 :root {
-  background-color: #230041;
+  background-color: #F7F7F7;
   --max-width: 1100px;
   --border-radius: 12px;
 
@@ -79,19 +79,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c683ff;
+  background-color: #04689B;
   margin-top: 70px;
 }
 
 .footer p {
-  color: #551a8b;
+  color: #f7f7f7;
   margin: 0;
   text-align: center;
   margin-left: 10px;
+  font-size: small;
 }
 
 .footer a {
-  color: #551a8b;
+  color: #f7f7f7;
 }
 
 body {
@@ -100,11 +101,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #c683ff;
+  color: #F7F7F7;
 }
 
 a p {
-  color: #c683ff;
+  color: #F7F7F7;
 }
 
 input {
@@ -117,8 +118,8 @@ input {
   outline: none;
   padding: 14px 25px;
   cursor: pointer;
-  background-color: #c683ff;
-  color: #230041;
+  background-color: #F7F7F7;
+  color: #006693;
   font-weight: bold;
   border-radius: 50px;
   transition: all .35s;
@@ -141,7 +142,8 @@ input {
 }
 
 .input-button:hover {
-  background-color: #a955f1;
+  background-color: #006693;
+  color: #f7f7f7;
 }
 
 @media screen and (max-width: 500px) {
