@@ -40,8 +40,7 @@ export default function Home() {
       const response = await fetch('/api/get-itinerary', {
         method: 'POST',
         body: JSON.stringify({
-          days: 2,
-          city: request.city
+          userInput: request.city
         })
       })
       const json = await response.json()
@@ -83,13 +82,13 @@ export default function Home() {
       <div className="app-container">
         <h1 style={styles.header} className="hero-header">Protocol Pal</h1>
         <div style={styles.formContainer} className="form-container">
-          <input style={styles.input}  placeholder="City" onChange={e => setRequest(request => ({
+          <input style={styles.input}  placeholder="What troubles is your lab giving you?" onChange={e => setRequest(request => ({
             ...request, city: e.target.value
           }))} />
-          <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
+          {/* <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
             ...request, days: e.target.value
-          }))} />
-          <button className="input-button"  onClick={hitAPI}>Build Itinerary</button>
+          }))} /> */}
+          <button className="input-button"  onClick={hitAPI}>Help me</button>
         </div>
         <div className="results-container">
         {
@@ -97,7 +96,30 @@ export default function Home() {
             <p>{message}</p>
           )
         }
-        {
+        { 
+          itinerary && (
+            // {/* {`Day ${day}`} */}
+            <div
+            style={{marginBottom: '30px'}}
+            // key={index}
+            >
+            <h3 style={{marginBottom: '20px', marginLeft: '-30px'}}>Here are some possible reasons:</h3>
+            {/* {request.city}: */}
+            <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              a: props => {
+                  return <a target="_blank" rel="no-opener" href={props.href}>{props.children}</a>
+              }
+            }}
+            >
+            {/* {`Day ${day}`} */}
+              {`${itinerary}`}
+              </ReactMarkdown>
+            </div>
+          )
+        }
+        {/* {
           itinerary && days.map((day, index) => (
             // <p
             //   key={index}
@@ -120,7 +142,7 @@ export default function Home() {
                 </ReactMarkdown>
             </div>
           ))
-        }
+        } */}
         </div>
       </div>
     </main>

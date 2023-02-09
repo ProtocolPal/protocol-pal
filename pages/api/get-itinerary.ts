@@ -25,21 +25,11 @@ export default async function handler(
   let days = 4, city = 'Rio'
   if (req.body) {
     let body = JSON.parse(req.body)
-    days = body.days
-    city = body.city
+    city = body.userInput
   }
 
-  const parts = city.split(' ')
-
-  if (parts.length > 5) {
-    throw new Error('please reduce size of request')
-  }
-  
-  if (days > 10) {
-    days = 10
-  }
-
-  let basePrompt = `what is an ideal itinerary for ${days} days in ${city}?`
+  // let basePrompt = `what is an ideal itinerary for ${days} days in ${city}?`
+  let basePrompt = `I have having issues with my lab and I am not sure why. Can you please help me with this: ${city}? Please respond with a properly formatted list as to why this may have happened, in order of highest chance.`
   try {
     const response = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
@@ -52,7 +42,7 @@ export default async function handler(
       })
     })
     const itinerary = await response.json()
-    const pointsOfInterestPrompt = 'Extract the points of interest out of this text, with no additional words, separated by commas: ' + itinerary.choices[0].text
+    const pointsOfInterestPrompt = 'Extract all points in this text, with no additional words, separated by commas: ' + itinerary.choices[0].text
 
     res.status(200).json({
       message: 'success',
