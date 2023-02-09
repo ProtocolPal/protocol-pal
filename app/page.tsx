@@ -13,8 +13,8 @@ export default function Home() {
   }, [])
 
   function checkRedirect() {
-    if (window.location.hostname === 'gpt-travel-advisor.vercel.app') {
-      window.location.replace('https://www.roamaround.io/')
+    if (window.location.hostname === 'protocol-by6f6ro1r-support-protocolpal.vercel.app') {
+      window.location.replace('https://www.protocolpal.app/')
     }
   }
 
@@ -22,25 +22,25 @@ export default function Home() {
   const [message, setMessage] = useState('')
   async function hitAPI() {
     try {
-      if (!request.city || !request.days) return
-      setMessage('Building itinerary...')
+      if (!request.city) return
+      setMessage('Consulting Einsten...')
       setLoading(true)
       setItinerary('')
 
       setTimeout(() => {
         if (!loading) return
-        setMessage('Getting closer ...')
+        setMessage('Checking in with Isaac Newton...')
       }, 7000)
 
       setTimeout(() => {
         if (!loading) return
-        setMessage('Almost there ...')
+        setMessage('On the line with Galileo...')
       }, 15000)
 
       const response = await fetch('/api/get-itinerary', {
         method: 'POST',
         body: JSON.stringify({
-          days: request.days,
+          days: 2,
           city: request.city
         })
       })
@@ -83,13 +83,13 @@ export default function Home() {
       <div className="app-container">
         <h1 style={styles.header} className="hero-header">Protocol Pal</h1>
         <div style={styles.formContainer} className="form-container">
-          <input style={styles.input}  placeholder="What lab troubles are you experiencing?" onChange={e => setRequest(request => ({
+          <input style={styles.input}  placeholder="City" onChange={e => setRequest(request => ({
             ...request, city: e.target.value
           }))} />
-          {/* <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
+          <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
             ...request, days: e.target.value
-          }))} /> */}
-          <button className="input-button"  onClick={hitAPI}>Help Me</button>
+          }))} />
+          <button className="input-button"  onClick={hitAPI}>Build Itinerary</button>
         </div>
         <div className="results-container">
         {
@@ -121,7 +121,6 @@ export default function Home() {
             </div>
           ))
         }
-
         </div>
       </div>
     </main>
@@ -150,7 +149,7 @@ const styles = {
     flexDirection: 'column' as 'column',
     margin: '20px auto 0px',
     padding: '20px',
-    boxShadow: '0px 0px 12px rgba(198, 131, 255, .2)',
+    boxShadow: '0px 0px 12px rgba(0, 102, 147, 0.2)',
     borderRadius: '10px'
   },
   result: {

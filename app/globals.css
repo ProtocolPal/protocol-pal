@@ -101,15 +101,16 @@ body {
 
 a {
   text-decoration: none;
-  color: #F7F7F7;
+  color: #00a6ff;
 }
 
 a p {
-  color: #F7F7F7;
+  color: #EEFAFE;
 }
 
 input {
   color: black;
+  border-color: #006693;
 }
 
 .input-button {
@@ -139,6 +140,10 @@ input {
   width: 800px;
   padding-top: 55px;
   margin:0 auto;
+}
+
+.results-container p{
+  color: #006693;
 }
 
 .input-button:hover {
