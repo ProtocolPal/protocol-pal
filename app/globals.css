@@ -166,7 +166,7 @@ input {
 @media screen and (max-width: 900px) {
   .results-container {
     width: 100%;
-    padding-left: 125px;
+    padding-left: 30px;
     padding-right: 15px;
     padding-top: 30px;
   }
