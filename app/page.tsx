@@ -23,13 +23,13 @@ export default function Home() {
   async function hitAPI() {
     try {
       if (!request.city) return
-      setMessage('Consulting Einsten...')
+      setMessage('Consulting Einstein...')
       setLoading(true)
       setItinerary('')
 
       setTimeout(() => {
         if (!loading) return
-        setMessage('Checking in with Isaac Newton...')
+        setMessage('Checking in with Newton...')
       }, 7000)
 
       setTimeout(() => {
@@ -82,7 +82,7 @@ export default function Home() {
       <div className="app-container">
         <h1 style={styles.header} className="hero-header">Protocol Pal</h1>
         <div style={styles.formContainer} className="form-container">
-          <input style={styles.input}  placeholder="What troubles is your lab giving you?" onChange={e => setRequest(request => ({
+          <input style={styles.input}  placeholder="What's up, Pal? How can I help?" onChange={e => setRequest(request => ({
             ...request, city: e.target.value
           }))} />
           {/* <input style={styles.input} placeholder="Days" onChange={e => setRequest(request => ({
@@ -103,7 +103,7 @@ export default function Home() {
             style={{marginBottom: '30px'}}
             // key={index}
             >
-            <h3 style={{marginBottom: '20px', marginLeft: '-30px'}}>Here are some possible reasons:</h3>
+            <h3 style={{marginBottom: '20px', marginLeft: '-30px'}}>Here to help!:</h3>
             {/* {request.city}: */}
             <ReactMarkdown
             remarkPlugins={[remarkGfm]}

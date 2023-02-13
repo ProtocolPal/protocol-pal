@@ -29,7 +29,7 @@ export default async function handler(
   }
 
   // let basePrompt = `what is an ideal itinerary for ${days} days in ${city}?`
-  let basePrompt = `I have having issues with my lab and I am not sure why. Can you please help me with this: ${city}? Please respond with a properly formatted list as to why this may have happened, in order of highest chance.`
+  let basePrompt = `The user wants help designing or troubleshooting an experiment. Respond to their prompt with a summary of their request, potential causes of their problem or important constraints, and a bullet-point list of follow up questions to help isolate the solution.`
   try {
     const response = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
