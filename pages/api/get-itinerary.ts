@@ -29,7 +29,7 @@ export default async function handler(
   }
 
   // let basePrompt = `what is an ideal itinerary for ${days} days in ${city}?`
-  let basePrompt = `Help the user troubleshoot or design their science experiment.`
+  let basePrompt = `The user wants help designing or troubleshooting an experiment. Respond to their prompt with a summary of their request, potential causes of their problem or important constraints, and a bullet-point list of follow up questions to help isolate the solution.`
   try {
     const response = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
